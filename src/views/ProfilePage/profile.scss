@@ -1,0 +1,44 @@
+@import '../../assets/default';
+
+.align-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.name {
+  font-size: 0.8rem;
+}
+
+.name-field {
+  margin-bottom: 3.75rem;
+}
+
+.welcome {
+  margin-bottom: 3.75rem;
+  margin-top: 2.5rem;
+}
+
+.profile-container {
+  margin-top: 3.75rem;
+}
+
+.input {
+  outline: none;
+}
+
+.icon-size {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 2rem;
+}
+
+.center-card {
+  text-align: center;
+}
+
+.stats-title {
+  margin-top: 6rem;
+  text-align: center;
+}

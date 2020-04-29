@@ -1,0 +1,31 @@
+@import '../../assets/default';
+
+.white-link,
+.navbar-brand {
+  color: $white-color;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 20px;
+  padding-left: 0;
+}
+
+.purple-link,
+.navbar-brand {
+  color: #8932b4;
+  font-size: 1.2em;
+  margin-right: 20px;
+  padding-left: 0;
+}
+
+.img-icon {
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+a {
+  &.purple-link:hover,
+  &.white-link:hover {
+    color: #ccc;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Merriweather'); // sass-lint:disable-line no-url-domains, no-url-protocols
+
+$font-family: 'Merriweather', serif;
+$font-family-header: 'Merriweather', serif;
+$font-family-body: 'Lato', sans-serif;
+
+// colors
+$text-color: #6f42c1;
+$deep-purple: hsl(279, 68%, 19%);
+$light-blue: #0575e6;
+$aaa-border: #aaa;
+$ddd-border: #ddd;
+$black-trans-bg: rgba(0, 0, 0, 0.6);
+$color-ccc: #ccc;
+$primary-color: #999;
+$box-shadow-color: 0 6px 20px 1px rgba(0, 0, 0, 0.15);
+$white-color: #fff;
+$yellow: #e2d754;
+$deep-purple: hsl(279, 68%, 19%);
+$deep-purple-grad: rgba(60, 16, 83, 0.9);
+$light-blue: #0575e6;
+$light-purple-grad: rgba(173, 83, 137, 0.9);
+$white: #fff;
+$button-shadow: rgba(111, 102, 3, 0.5);
+$hover-button-shadow: rgba(111, 102, 3, 0.8);
+$hover-button-shadow-1: 0 12px 60px;
+$hover-color: rgb(46, 39, 53);
+$hover-background: rgb(172, 163, 64);
+$box-shadow: 0 12px 60px;
+$yellow-button-color: #51455c;
+$purple-nav: #8932b4;
+$yellow-color: #e2d754;
+$black-color: #000;
+$button-yellow: #e2d754;
+$button-yellow-hover: rgb(172, 163, 64);
+$button-shadow: rgba(111, 102, 3, 0.5);
+$button-shadow-hover: rgba(111, 102, 3, 0.8);
+$button-text: #51455c;
+$button-text-hover: rgb(46, 39, 53);
+$border-styling: rgba(255, 255, 255, 0.3);
+
+// input sizes
+$input-field-width: 80%;
+$text-color: #6f42c1;
+$color-ccc: #ccc;
+
+
+a,
+.yellow-button {
+  transition: ease-in-out 0.4s;
+}
+
+.purple-gradient-bg {
+  background-attachment: fixed;
+  background-image: linear-gradient(to right, $deep-purple-grad, $light-purple-grad),
+  url('https://res.cloudinary.com/jessam/image/upload/v1554725326/tachina-lee-42980-unsplash_1.jpg');// sass-lint:disable-line no-url-domains, no-url-protocols
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+input,
+select {
+  &.dark-forms {
+    background-color: transparent;
+    border: $aaa-border 1px solid;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+    color: $ddd-border;
+    font-size: 0.9em;
+    margin: 20px auto;
+    padding: 20px;
+    width: $input-field-width;
+  }
+}
+
+.form-black-bg {
+  background: $black-trans-bg;
+  color: $color-ccc;
+  font-weight: 100;
+  margin: 50px auto;
+  padding: 40px 10px;
+  text-align: center;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-ccc;
+    }
+  }
+
+  h3 {
+    color: $white;
+  }
+
+}
+
+body {
+  font-family: $font-family-body;
+  font-size: 1rem;
+}
+
+html {
+  font-family: $font-family-body;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: $font-family-header;
+  font-size: 2.074rem;
+}
+
+h2 {
+  font-family: $font-family-header;
+  font-size: 1.728rem;
+}
+
+h3 {
+  font-family: $font-family-header;
+  font-size: 1.20rem;
+}
+
+h4 {
+  font-family: $font-family-header;
+  font-size: 0.9rem;
+}
+
+h5 {
+  font-family: $font-family-header;
+  font-size: 1rem;
+}
+
+h6 {
+  font-family: $font-family-header;
+  font-size: 0.3rem;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+a {
+  color: $purple-nav;
+  transition: ease-in-out 0.4s;
+
+  &.purple-link:hover { //sass-lint:disable-line force-pseudo-nesting
+    color: $hover-color;
+    text-decoration: none;
+  }
+
+  &.white-link:hover { //sass-lint:disable-line force-pseudo-nesting
+    color: $white-color;
+    text-decoration: none;
+  }
+}
+
+.small {font-size: 0.7rem;}
+
+.box { padding: 1.25rem; }
+
+
+.card-outline {
+  box-shadow: $box-shadow-color;
+  margin-top: 2rem;
+
+  &-comment {
+    margin-top: 1rem;
+  }
+}
+
+.summary-card-body {
+  flex: 1 1 auto;
+  height: 6.3rem;
+  padding: 1rem;
+}
+
+.form-label {
+  margin-right: 1rem;
+}
+
+.cont {
+  background-image: linear-gradient(to right, $deep-purple-grad, $light-purple-grad),
+  url('https://res.cloudinary.com/jessam/image/upload/v1554725326/tachina-lee-42980-unsplash_1.jpg'); // sass-lint:disable-line no-url-domains, no-url-protocols
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  overflow: hidden;
+  padding-bottom: 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.yellow-button {
+  background: $yellow;
+  border: 0;
+  box-shadow: $box-shadow $button-shadow;
+  color: $yellow-button-color;
+  font-size: 1.23em;
+  font-weight: 500;
+  line-height: normal;
+  padding: 12px 25px;
+  text-align: center;
+  transition: ease-in-out 0.4s;
+
+  &:hover {
+    background: $hover-background;
+    box-shadow: $hover-button-shadow-1 $hover-button-shadow;
+    color: $hover-color;
+  }
+
+  &-comment {
+    box-shadow: $box-shadow $button-shadow;
+    font-size: small;
+    padding: 6px 20px;
+  }
+
+  &-search {
+    box-shadow: none;
+    font-size: 0.9em;
+  }
+
+  &-alert {
+    font-size: small;
+    padding: 6px 20px;
+  }
+
+  &-profile {
+    font-size: large;
+    padding: 6px 20px;
+  }
+}
+
+.white-link,
+.navbar-brand {
+  color: $white-color;
+  font-size: 1.2em;
+  margin-right: 20px;
+  padding-left: 0;
+
+  &-text {
+    color: $black-color;
+  }
+}
+
+.purple-link,
+.navbar-brand {
+  color: $purple-nav;
+  font-size: 1.2em;
+  margin-right: 20px;
+  padding-left: 0;
+
+  &-text {
+    color: $purple-nav;
+  }
+}
+
+.container-social-login {
+
+  .info {
+    display: block;
+    font-size: 0.9rem;
+    font-style: $font-family-body;
+    margin-bottom: 1rem;
+  }
+
+  .social-media-icons {
+    margin: 0 0.8rem;
+  }
+}
+
+.search-pad {
+  padding-top: 2rem;
+}
+
+.search-entry {
+  background-image: url('https://res.cloudinary.com/dqyytlxwe/image/upload/v1555842449/search.png');
+  background-position: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: 2rem 2rem;
+  text-indent: 2rem;
+}
+
+.container-directing-to-signup,
+.container-directing-to-login {
+  margin: 1em 0;
+
+  & span {
+    display: block;
+    font-size: 1em;
+  }
+
+  .link-to-another-page {
+    color: $yellow;
+    font-size: 1em;
+    margin: 0.5em;
+    text-decoration: none;
+  }
+}
+
+img {
+  &.thumbnail-image {
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+  }
+}
+
+.small-profile {
+  border-radius: 50%;
+  height: 3.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 3.5rem;
+}
+
+.dropdown-toggle {
+  &::after {
+    display: none;
+  }
+}
+
+
+.dropdown-menu {
+  left: -6rem;
+
+  &.show {
+    right: 10rem;
+    top: 4rem;
+    }
+}
+
+.fab-item:nth-last-child(1) {
+  background-image: url('https://res.cloudinary.com/dqyytlxwe/image/upload/v1555966518/plus-symbol2.png');
+  background-size: contain;
+  transition-delay: 25ms;
+  z-index: 999999;
+
+}
+
+.fab {
+  bottom: 4rem;
+  font-size: 0.8rem;
+  margin-left: -28px;
+  position: fixed;
+  right: 2rem;
+  z-index: 999999;
+}
+
+.reactions {
+  img {
+    height: auto;
+    width: 32px;
+  }
+}
+
+.float-front-left {
+  position: absolute;
+  top: 33%;
+  z-index: 10000000001;
+}
+
+.fab-likes {
+  left: 7rem;
+  max-width: 40%;
+  position: absolute;
+  top: 20rem;
+  z-index: 999999;
+}
+
+.button-margin {
+  margin-top: 2rem;
+}
+
+.icon-sizes {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+
+  &-reaction {
+    cursor: initial;
+  }
+}
+
+.alert-style {
+  position: fixed;
+  top: 2rem;
+  z-index: 999999999;
+}
+
+.link-card {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.article-col-count {
+  column-count: 4;
+}
+
+@media screen and (min-width: 1400px) {
+  html { font-size: 1.25rem; }
+}
+
+@media screen and (min-width: 750px) and (max-width: 800px) {
+  .card-columns {
+    column-count: 2;
+  }
+
+  .article-col-count {
+    column-count: 2;
+  }
+
+  .fab-likes {
+    left: 1rem;
+    position: absolute;
+    top: 15rem;
+    z-index: 999999;
+  }
+
+  .navbar-nav {
+    padding-top: 1rem;
+
+    & .dropdown-menu {
+      position: absolute;
+    }
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .fab-likes {
+    left: 1rem;
+    position: absolute;
+    top: 5rem;
+    z-index: 999999;
+  }
+
+  .icon-sizes {
+    height: 1.5rem;
+    width: 1.5rem;
+
+    &-reaction {
+      cursor: initial;
+    }
+  }
+
+  .navbar {
+    align-items: baseline;
+  }
+
+  .navbar-nav {
+    padding-top: 1rem;
+
+    & .dropdown-menu {
+      position: absolute;
+    }
+  }
+
+  .small-profile {
+    border-radius: 50%;
+    display: block;
+    height: 3.5rem;
+    overflow: hidden;
+    position: relative;
+    width: 3.5rem;
+  }
+
+  img {
+    &.thumbnail-image {
+      height: 100%;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+
+  .hide-small {
+    display: none;
+  }
+
+  .button-margin {
+    margin-top: 0.5rem;
+  }
+
+  .alert-style {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    position: fixed;
+    top: 3rem;
+    z-index: 999999999;
+ }
+
+  .article-col-count {
+    column-count: 1;
+ }
+
+}
